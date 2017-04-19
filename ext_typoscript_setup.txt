@@ -1,0 +1,12 @@
+plugin.tx_linkdatacollector {
+    settings {
+        pidForNewRecord = 123
+        mail {
+            enable = 1
+            subject = New notification
+            fromMailAddress = noreply@example.com
+            fromMailName = Admin
+            to = admin@example.com
+        }
+    }
+}

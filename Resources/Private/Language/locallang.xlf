@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2017-04-19T18:44:00Z" product-name="link_data_collector">
+		<header/>
+		<body>
+			<trans-unit id="tx_linkdatacollector_domain_model_data">
+				<source>Data</source>
+			</trans-unit>
+			<trans-unit id="tx_linkdatacollector_domain_model_data.last_name">
+				<source>Last Name</source>
+			</trans-unit>
+			<trans-unit id="tx_linkdatacollector_domain_model_data.first_name">
+				<source>First Name</source>
+			</trans-unit>
+			<trans-unit id="tx_linkdatacollector_domain_model_data.file_path">
+				<source>File Path</source>
+			</trans-unit>
+			<trans-unit id="tx_linkdatacollector_domain_model_data.email">
+				<source>Email</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

@@ -1,0 +1,52 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default"/>
+
+
+<f:section name="main">
+
+    <f:flashMessages/>
+
+    <f:form.validationResults for="{data}">
+        <f:if condition="{validationResults.flattenedErrors}">
+            <ul>
+                <f:for each="{validationResults.flattenedErrors}" key="propertyPath" as="errors">
+                    <li>
+                        {propertyPath}:
+                        <ul>
+                            <f:for each="{errors}" as="error">
+                                <li>{error}</li>
+                            </f:for>
+                        </ul>
+                    </li>
+                </f:for>
+            </ul>
+        </f:if>
+    </f:form.validationResults>
+
+    <f:form action="create" name="data" object="{data}" additionalParams="{type:'9615'}" noCacheHash="1">
+        <div class="row">
+            <div class="col-md-6">
+                <label for="lastName">
+                    <f:translate key="tx_linkdatacollector_domain_model_data.last_name"/>
+                </label>
+                <f:form.textfield id="lastName" property="lastName"/>
+            </div>
+            <div class="col-md-6">
+                <label for="firstName">
+                    <f:translate key="tx_linkdatacollector_domain_model_data.first_name"/>
+                </label>
+                <f:form.textfield property="firstName" id="firstName"/>
+            </div>
+        </div>
+        <label>
+            <f:translate key="tx_linkdatacollector_domain_model_data.email"/>
+            <f:form.textfield property="email"/>
+        </label>
+
+        <f:form.hidden property="filePath" value="{file}"/>
+        <f:form.submit value="Create new"/>
+    </f:form>
+
+    <a href="javascript:parent.jQuery.fancybox.getInstance().close();">gleich schließen</a>
+</f:section>
+</html>
